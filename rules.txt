@@ -1,0 +1,4 @@
+To detect port scan 
+Rule : alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"SCAN FIN"; flow:stateless; flags:S, 12; reference:arachnids,27; classtype:attempted-recon; sid:621; rev:8;)
+To test : nmap ip
+
